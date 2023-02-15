@@ -108,22 +108,28 @@ public class HW2 {
         System.out.println(InsertAndDeleteChar(result,2));
 
         String pleaseDontBurnMyPc = "=";
-        for(int i = 0; i<10000;i++){
+        for(int i = 0; i<9999;i++){
             pleaseDontBurnMyPc+= "=";
         }
-
+        System.out.println(pleaseDontBurnMyPc.length());
         StringBuilder itsAlmoustBrandnew = new StringBuilder();
         for(int i = 0; i<10000;i++){
             itsAlmoustBrandnew.append("=");
         }
+        System.out.println(itsAlmoustBrandnew.length());
 
         long begin = System.currentTimeMillis();
         for(int i = 0; i<pleaseDontBurnMyPc.length();i++){
             pleaseDontBurnMyPc.replace("=", "равно");
         }
         long end = System.currentTimeMillis();
-        System.out.println(end - begin);
+        System.out.println(end - begin); //2238
 
-
+        begin = System.currentTimeMillis();
+        for(int i = 0; i<itsAlmoustBrandnew.length();i++){
+            itsAlmoustBrandnew.replace(i, i+1, "=");
+        }
+        end = System.currentTimeMillis();
+        System.out.println(end - begin); //5
     }
 }
