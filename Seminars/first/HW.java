@@ -7,9 +7,9 @@ public class HW {
         Random random = new Random();
         int i = 0;
         i = random.nextInt(2000);
-        // System.out.println(i);
+        System.out.println(i);
         int n = Bit2(i);
-        // System.out.println(n);
+        System.out.println(n);
         int[] m1 = new int[1];
         int[] m2 = new int[1];
         m1 = ArrayAddShortMax(m1, n);
@@ -21,11 +21,11 @@ public class HW {
         while (x != 1) {
             x >>= 1;
             res++;
-          }
-        return res;
         }
+        return res;
+    }
 
-    static int[] ArrayAddShortMax(int[]myArray,int num) {
+    static int[] ArrayAddShortMax(int[] myArray, int num) {
         int index = 0;
         for (int j = 0; j <= Short.MAX_VALUE; j++) {
             if (j % num == 0) {
@@ -35,10 +35,11 @@ public class HW {
                 continue;
             }
         }
-        // System.out.println(myArray.length);
+        System.out.println(myArray.length);
         return myArray;
     }
-    static int[] ArrayAddShortMin(int[]myArray,int num) {
+
+    static int[] ArrayAddShortMin(int[] myArray, int num) {
         int index = 0;
         for (int j = 0; j >= Short.MIN_VALUE; j--) {
             if (j % num != 0) {
@@ -48,7 +49,7 @@ public class HW {
                 continue;
             }
         }
-        // System.out.println(myArray.length);
+        System.out.println(myArray.length);
         return myArray;
     }
 }
