@@ -18,9 +18,9 @@ public class HW2 {
         if (length <= 1) {
             return arg;
         }
-        leftPart = arg.substring(0, length / 2);
-        rightPart = arg.substring(length / 2, length);
-        return ReverseRec(rightPart) + ReverseRec(leftPart);
+        leftPart = arg.substring(0, length / 2); 
+        rightPart = arg.substring(length / 2, length); 
+        return ReverseRec(rightPart) + ReverseRec(leftPart); 
     }
     static StringBuilder LetsAppend(StringBuilder arg1, StringBuilder arg2, String operand){
         StringBuilder result = new StringBuilder();
