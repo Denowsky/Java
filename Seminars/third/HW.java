@@ -14,6 +14,7 @@ package Seminars.third;
 
 import java.net.SocketImpl;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Iterator;
 import java.util.Collections;
 
@@ -65,7 +66,7 @@ public class HW {
             arrlist.add("Daffodils");
         }
         long end = System.currentTimeMillis();
-        System.out.println(end - begin); //
+        System.out.println(end - begin); //0
         
         LinkedList<String> linklist = new LinkedList<>();
         begin = System.currentTimeMillis();
@@ -73,6 +74,6 @@ public class HW {
             linklist.add("Daffodils");
         }
         end = System.currentTimeMillis();
-        System.out.println(end - begin); //
+        System.out.println(end - begin); //0
     }
 }
