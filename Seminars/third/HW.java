@@ -62,7 +62,7 @@ public class HW {
         
         ArrayList<String> arrlist = new ArrayList<>();
         long begin = System.currentTimeMillis(); // Засекаем время для сравнения
-        for(int i = 0; i<=1000; i++){
+        for(int i = 0; i<1000; i++){
             arrlist.add("Daffodils");
         }
         long end = System.currentTimeMillis();
@@ -70,7 +70,7 @@ public class HW {
         
         LinkedList<String> linklist = new LinkedList<>();
         begin = System.currentTimeMillis();
-        for(int i = 0; i<=1000; i++){
+        for(int i = 0; i<1000; i++){
             linklist.add("Daffodils");
         }
         end = System.currentTimeMillis();
