@@ -37,8 +37,6 @@ public class HW {
         ArrayList<Integer> sorted = new ArrayList<>();
         sorted.addAll(age);
         sorted.sort(null);
-        System.out.println(sorted);
-        System.out.println(age);
             for (int i = 0; i < sorted.size(); i++) {
                 Integer j = 0;
                 if (out.equals("y")) {
