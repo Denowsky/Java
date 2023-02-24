@@ -1,9 +1,6 @@
 package Seminars.fourth;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.LinkedList;
 import java.util.Scanner;
 
 public class HW {
@@ -37,11 +34,19 @@ public class HW {
         System.out.println("Отсортировать список по возрасту? 'y' или 'n':");
         String out = scan.nextLine();
         scan.close();
-        ArrayList<Integer> sorted = age;
+        ArrayList<Integer> sorted = new ArrayList<>();
+        sorted.addAll(age);
         sorted.sort(null);
-        if (out.equals("y")) {
+        System.out.println(sorted);
+        System.out.println(age);
             for (int i = 0; i < sorted.size(); i++) {
-                Integer j = age.indexOf(sorted.get(i));
+                Integer j = 0;
+                if (out.equals("y")) {
+                    j = age.indexOf(sorted.get(i));
+                }
+                else{
+                    j = i;
+                }
                 StringBuilder str = new StringBuilder();
                 str.append(lastname.get(j)).append(" ")
                         .append(firstname.get(j).charAt(0)).append(".")
@@ -49,15 +54,5 @@ public class HW {
                         .append(age.get(j)).append(sex.get(j).charAt(0));
                 System.out.println(str);
             }
-        } else {
-            for (int i = 0; i < sorted.size(); i++) {
-                StringBuilder str = new StringBuilder();
-                str.append(lastname.get(i)).append(" ")
-                        .append(firstname.get(i).charAt(0)).append(".")
-                        .append(patronymic.get(i).charAt(0)).append(". ")
-                        .append(age.get(i)).append(sex.get(i).charAt(0));
-                System.out.println(str);
-            }
-        }
     }
 }
